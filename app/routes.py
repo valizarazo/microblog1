@@ -16,3 +16,14 @@ def index():
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
+@app.route('/songs')
+def songs():
+    songs =[
+        {
+            'title': 'Mr. Cadillac', 'artist': 'Mac Saturn'
+        },
+        {
+            'title': 'Light My Love', 'artist':'Greta Van Fleet'
+        }
+        ]
+    return render_template('songs.html', title='Song Page', songs=songs)
