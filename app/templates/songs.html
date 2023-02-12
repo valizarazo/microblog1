@@ -3,6 +3,6 @@
 {%block content%}
     <h1>Hi, here are some songs!</h1>
     {% for songs in songs %}
-    <div><h1>Song:</h1>{{ songs.title}}</p></div>
+    <div><p><b>{{ songs.title }}</b> written by: <b>{{songs.artist}}</b></p></div>
     {% endfor %}
 {% endblock %}
