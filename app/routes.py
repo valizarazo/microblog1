@@ -21,10 +21,10 @@ def index():
 def songs():
     songs =[
         {
-            'title': 'Mr. Cadillac', 'artist': 'Mac Saturn'
+            'title': 'Mr. Cadillac', 'artist': 'Mac Saturn','price': '5 notes'
         },
         {
-            'title': 'Light My Love', 'artist':'Greta Van Fleet'
+            'title': 'Light My Love', 'artist':'Greta Van Fleet','price': '5 notes'
         }
         ]
     return render_template('songs.html', title='Song Page', songs=songs)
@@ -36,3 +36,16 @@ def login():
             form.username.data, form.remember_me.data))
         return redirect('/index')
     return render_template('login.html', title='Sign In', form=form)
+@app.route('/mystuff')
+def account():
+    my_songs =[
+        {
+            'title': 'Mr. Cadillac', 'artist': 'Mac Saturn'
+        }
+        ]
+    my_notes =[
+        {
+            'notes amount': '10'
+        }
+        ]
+    return render_template('account.html', title='Account Page', account=account, my_songs=my_songs, my_notes=my_notes)
