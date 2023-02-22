@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-
-{%block content%}
-    <h1>Hi, here are your account details!</h1>
-    {% for account in account %}
-    <div><p>You own</p><p><b>{{account.my_songs}}</b></p> and you have: <p><b>{{account.my_notes}}</b></p><p>notes</p></div>
-    {% endfor %}
-{% endblock %}
